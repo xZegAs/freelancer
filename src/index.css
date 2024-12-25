@@ -1,68 +1,139 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  --main-color: #2c3e50;
+  --secondary-color: #1abc9c;
+  --third-color: #1a252f;
 }
 
 body {
   margin: 0;
+}
+
+.vh-85 {
+  height: 85vh;
+}
+
+.bg-main {
+  background-color: var(--main-color) !important;
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color) !important;
+}
+
+.bg-third {
+  background-color: var(--third-color);
+}
+
+.text-main {
+  color: var(--main-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.divider {
+  width: 100%;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.divider .line {
+  width: 100px;
+  height: 4px;
+  background-color: currentColor;
+  border-radius: 2px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.section {
+  min-height: 98vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-item {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.portfolio-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 188, 156, 0.9);
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-item:hover .overlay {
+  opacity: 1;
+}
+
+.navbar {
+  height: 100px;
+  transition: height 0.5s ease-in-out;
+}
+
+.navbar-scrolled {
+  height: 80px;
+}
+
+.nav-link {
+  font-weight: 600;
+  transition: background-color 0.3s;
+  width: fit-content;
+  padding: 0.5rem;
+}
+
+.nav-link.active {
+  background-color: var(--secondary-color);
+  border-radius: 0.5rem;
+}
+
+#navbar-nav {
+  text-align: start;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  width: 600px;
+  padding: 20px;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
