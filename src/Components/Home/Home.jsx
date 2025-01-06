@@ -1,4 +1,4 @@
-import avatar from "../assets/avataaars.svg";
+import avatar from "../../assets/avataaars.svg";
 import { Container } from "react-bootstrap";
 import StarDivider from "../StarDivider/StarDivider";
 import PageTitleChange from "../PageTitle/PageTitleChange";

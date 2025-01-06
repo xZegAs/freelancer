@@ -1,8 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap";
 import StarDivider from "../StarDivider/StarDivider";
-import cabin from "../assets/poert1.png";
-import cake from "../assets/port2.png";
-import circus from "../assets/port3.png";
+import cabin from "../../assets/poert1.png";
+import cake from "../../assets/port2.png";
+import circus from "../../assets/port3.png";
 import { useState } from "react";
 import ImagePreviewModal from "../ImagePreviewModal/ImagePreviewModal";
 import PageTitleChange from "../PageTitle/PageTitleChange";

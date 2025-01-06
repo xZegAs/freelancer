@@ -1,11 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-import Home from "./Home/Home";
-import About from "./About/About";
-import Portfolio from "./Portfolio/Portfolio";
-import Contact from "./Contact/Contact";
-import MainLayout from "./MainLayout/MainLayout";
-import NotFound from "./NotFound/NotFound";
+import Home from "./Components/Home/Home";
+import About from "./Components/About/About";
+import Portfolio from "./Components/Portfolio/Portfolio";
+import Contact from "./Components/Contact/Contact";
+import MainLayout from "./Components/MainLayout/MainLayout";
+import NotFound from "./Components/NotFound/NotFound";
 
 let routes = createBrowserRouter([
   {
